@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .form-container {
+        @apply flex flex-1 flex-col justify-center px-6 md:px-0 lg:flex-1 relative
+    }
+
+    .form-group {
+        @apply space-y-1
+    }
+
+    .form-label {
+        @apply block text-sm font-medium text-textColor
+    } 
+
+    input[type='checkbox'] {
+        @apply h-4 w-4 rounded border-gray-300 text-primary accent-primary checked:bg-primary
+    }
+
+    .input-field-label-error {
+      @apply absolute text-xs font-medium text-danger;
+    }
+
+    .view-icon-wrapper {
+        @apply absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5
+    }
+
+    .view-icon-wrapper .icon {
+        @apply h-6 text-iconColor
+    }
+
+    .btn {
+        padding-bottom: .563rem;
+        padding-top: .563rem;
+        @apply relative border px-4 inline-flex items-center justify-center rounded
+    }
+
+    .checkbox-field label {
+        @apply gap-2 text-sm text-textColor flex items-center
+    }
+
+    .checkbox-field .input-checkbox {
+        @apply h-4 w-4 rounded border-gray-300 text-primary accent-primary checked:bg-primary
+    }
+
+    .radio-group .radio-group-wrapper {
+        @apply flex items-center
+    }
+
+    .radio-group .radio-group-wrapper label {
+        @apply ml-2 block text-sm font-medium text-textColor
+    }
+
+    .radio-field {
+        @apply h-4 w-4 border-gray-300 accent-primary checked:bg-primary
+    }
+
+    .icon-wrapper {
+        @apply inline-flex
+    }
+
+    .with-icon .icon-wrapper svg {
+        @apply -ml-1 mr-2 h-5 w-5
+    }
+}
